@@ -568,7 +568,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
     top: -280px !important;
     right: auto !important;
     left: 50% !important;
-    transform: translateX(-55%) !important;
+    transform: translateX(-50%) !important;
   }
 
   .final         { padding: 0 28px 72px !important; justify-content: flex-end !important; padding-bottom: 180px !important; }
@@ -577,7 +577,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
   .app-btn       { padding: 14px 24px !important; gap: 12px !important; }
   .btn-main      { font-size: 16px !important; }
 
-  /* ── MOBILE FEATURE CARDS ── */
+  /* move glow behind slogan/CTA area */
+  .title-glow {
+    top: auto !important;
+    bottom: 140px !important;
+    transform: translateX(-50%) !important;
+    width: 400px !important;
+    height: 250px !important;
+  }
+
+    /* ── MOBILE FEATURE CARDS ── */
   .mobile-features {
     display: flex !important;
     flex-direction: column;
