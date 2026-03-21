@@ -559,15 +559,19 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
     height: 100vh !important;
   }
 
-  .cone-left,
-  .cone-right {
-    width: 400px !important;
-    height: 400px !important;
-  }
-  .cone-left  { bottom: 0px !important;   left: -150px !important; }
-  .cone-right { top: -140px !important;   right: -160px !important; }
+  /* hide left cone on mobile — single centered cone at top */
+  .cone-left { display: none !important; }
 
-  .final         { padding: 0 28px 72px !important; }
+  .cone-right {
+    width: 520px !important;
+    height: 520px !important;
+    top: -200px !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .final         { padding: 0 28px 72px !important; justify-content: flex-end !important; padding-bottom: 120px !important; }
   .final-ghost   { font-size: clamp(34px, 12vw, 60px) !important; letter-spacing: 0.2em !important; }
   .final-slogan  { font-size: clamp(16px, 5vw, 24px) !important; margin-bottom: 32px !important; }
   .app-btn       { padding: 14px 24px !important; gap: 12px !important; }
@@ -645,7 +649,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 @media (max-width: 390px) {
   .m-phone-img { width: 170px; }
   .m-heading   { font-size: 26px; }
-  .cone-left, .cone-right { width: 320px !important; height: 320px !important; }
+  .cone-right { width: 420px !important; height: 420px !important; top: -160px !important; }
 }
 
 
