@@ -1051,13 +1051,15 @@ setTimeout(() => setPanel(0), 100);
     ghostTiltY += (ghostTargetY - ghostTiltY) * 0.06;
   const coneLeft  = document.getElementById('coneLeft');
   const coneRight = document.getElementById('coneRight');
-    if (coneLeft) {
-      coneLeft.style.transform =
-        `translateX(${ghostTiltY * 2}px) translateY(${ghostTiltX * 2}px)`;
-    }
-    if (coneRight) {
-      coneRight.style.transform =
-        `translateX(${-ghostTiltY * 2}px) translateY(${-ghostTiltX * 2}px)`;
+    if (window.innerWidth > 768) {
+      if (coneLeft) {
+        coneLeft.style.transform =
+          `translateX(${ghostTiltY * 2}px) translateY(${ghostTiltX * 2}px)`;
+      }
+      if (coneRight) {
+        coneRight.style.transform =
+          `translateX(${-ghostTiltY * 2}px) translateY(${-ghostTiltX * 2}px)`;
+      }
     }
     drawCymatic();
     requestAnimationFrame(ghostLoop);
